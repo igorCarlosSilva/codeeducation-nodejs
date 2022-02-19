@@ -14,7 +14,7 @@ const mysql = require('mysql');
 
 const connection = mysql.createConnection(config);
 
-const sql_create_table = `create table if not exists people(id int not null auto_increment, name varchar(50));`;
+const sql_create_table = `create table if not exists people(id int not null auto_increment, name varchar(50), primary key (id));`;
 connection.query(sql_create_table);
 
 
